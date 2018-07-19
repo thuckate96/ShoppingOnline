@@ -1,0 +1,55 @@
+<div class="container" ng-controller="signupCtrl" ng-init="passCol='black'" style="padding-bottom: 10rem">
+	<div class="row">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3" style="margin-left: 25%">
+			<form role="form" novalidate="">
+				<h2><small>Tạo tài khoản</small></h2>
+				<hr class="colorgraph">
+
+
+				<div class="form-group">
+					<input type="text" name="name" class="form-control input-lg" ng-model="name" placeholder="Enter Name" tabindex="4" required my-name>
+					<span style="color: blue;font-style: italic;">{{nameerror}}</span>
+				</div>
+
+				<div class="form-group">
+					<input type="email" name="email" class="form-control input-lg" placeholder="Email Address" tabindex="4" ng-model="email" required my-email>
+					<span style="color: blue;font-style: italic;">{{emailerror}}</span>
+				</div>
+
+				<div class="form-group">
+					<input type="text" name="address" class="form-control input-lg" ng-model="address" placeholder="Your address" tabindex="3" required my-address>
+					<span style="color: blue;font-style: italic;">{{addresserror}}</span>
+				</div>
+
+
+				<div class="form-group">
+					<input type="text" name="phonenumber" class="form-control input-lg" placeholder="Phone number" tabindex="3" ng-model="phonenumber" required my-phonenumber>
+					<span style="color: blue;font-style: italic;">{{phonenumbererror}}</span>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="form-group">
+							<input type="password" name="password" class="form-control input-lg" placeholder="Password" tabindex="5" ng-model="password" required my-password>
+							<span style="color: blue;font-style: italic;">{{passworderror}}</span>
+							<span style="color: {{passCol}}; font-style: italic;" class="typepass">{{passwordtype}}</span>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="form-group">
+							<input type="password" name="repassword" class="form-control input-lg" placeholder="Confirm Password" tabindex="6" ng-model="repassword" required my-repassword>
+							<span style="color: blue;font-style: italic;">{{repassworderror}}</span>
+						</div>
+					</div>
+				</div>
+			
+				<hr class="colorgraph">
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7" ng-click="Register()"></div>
+					<div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
